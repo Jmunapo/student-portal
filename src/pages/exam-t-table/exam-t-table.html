@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Exam Timetable</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <i class="fa fa-print fa-fw fa-2x" aria-hidden="true"></i>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content style="background-image: url('assets/imgs/grid_noise.png');">
+  <ion-item-group>
+      <ion-item-divider class="text-primary" color="secondary">Examination Timetable For NOVEMBER 2018 </ion-item-divider>
+      <div class="alert alert-warning" role="alert">
+        <b>NOTE::</b> Please report clashes and/or challenges about the timetable to your department by 15 OCTOBER 2018
+      </div>
+      <ion-grid>
+          <ion-row class="t-heading">
+            <ion-col col-2>
+              CODE
+            </ion-col>
+            <ion-col col-3>
+              VENUE
+            </ion-col>
+            <ion-col col-3>
+              DATE
+            </ion-col>
+            <ion-col col-2>
+              TIME
+            </ion-col>
+            <ion-col col-2>
+              SITTING POS
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="t-body" *ngFor="let a of [1,2,3,4,5]">
+            <ion-col col-2>
+              HCS10{{a}}
+            </ion-col>
+            <ion-col col-3>
+              SGC1{{a}}
+            </ion-col>
+            <ion-col col-3>
+              2018-11-1{{a}}
+            </ion-col>
+            <ion-col col-2>
+              09:00
+            </ion-col>
+            <ion-col col-2>
+              {{a * 4}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider class="text-primary" color="secondary"> Venue Key </ion-item-divider>
+      <ion-grid>
+          <ion-row class="t-heading">
+            <ion-col col-4>
+              VENUE CODE
+            </ion-col>
+            <ion-col col-8>
+              DESCRIPTION
+            </ion-col>
+          </ion-row>
+  
+          <ion-row class="t-body" *ngFor="let a of [1,2,3,4,5]">
+            <ion-col col-4>
+              SGC1{{a}}
+            </ion-col>
+            <ion-col col-8>
+              SCH OF GENDER AND CULTURE STUDIES 1{{a}}
+            </ion-col>
+          </ion-row>
+  
+          <ion-row class="t-action" justify-content-start>
+            <ion-col col-12>
+                <button ion-button icon-start outline>
+                  <!-- https://ionicacademy.com/read-write-calendar-ionic/ https://youtu.be/m8jA74YAOq4 -->
+                  <i class="fa fa-calendar-plus-o fa-fw fa-cal" aria-hidden="true"></i>
+                  Add To Calendar
+                </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-item-group>
+ 
+</ion-content>

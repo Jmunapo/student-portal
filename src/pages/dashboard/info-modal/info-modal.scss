@@ -1,0 +1,24 @@
+page-info-modal {
+    .fab{
+        box-shadow: unset;
+        background-color: transparent;
+        border: 1px solid color($colors, danger) !important;
+        color: color($colors, danger) !important;
+    }
+
+    .profile-back{
+        .item-md[no-lines]{
+            background: transparent !important;
+        }
+    }
+
+    .profile-links {
+        background-color: #FFFF99 !important;
+        border-bottom: 1px solid #bce8f1 !important;
+    }
+
+    .prof-links-txt{
+        font-size: 1.4rem;
+        font-weight: normal;
+    }
+}

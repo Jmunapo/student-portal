@@ -1,0 +1,24 @@
+<ion-header >
+  <ion-navbar color="primary">
+    <ion-title>More Information</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-image: url('assets/imgs/grid_noise.png');">
+    <ion-fab bottom right>
+      <button ion-fab mini  color="light" (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-fab>
+
+    <ion-list no-lines>
+        <button class="text-primary profile-links" ion-item (click)="payWithEcocash()">
+          <span class="prof-links-txt">Pay with Ecocash</span>
+          <i class="fa fa-angle-right" aria-hidden="true" item-right></i>
+        </button>
+        <button class="text-primary profile-links" ion-item (click)="newsPage()">
+          <span class="prof-links-txt">Latest News</span>
+          <i class="fa fa-angle-right" aria-hidden="true" item-right></i>
+        </button>
+      </ion-list>
+</ion-content>

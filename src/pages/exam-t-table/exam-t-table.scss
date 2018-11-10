@@ -1,0 +1,38 @@
+page-exam-t-table {
+    ion-col {
+        border: 1px solid #dddddd;
+    }
+
+    .t-heading{
+        ion-col {
+            font-weight: bold;
+        }
+    }
+
+    .t-action{
+        ion-col{
+            text-align: center;
+            /*min-height: 100px;*/
+        }
+    }
+    .text-danger{
+        color: #F00 !important;
+    }
+
+    .alert-warning {
+        background-color: #fcf8e3;
+        border-color: #faf2cc;
+        color: #8a6d3b;
+        min-height: 60px;
+    }
+    .alert {
+        position: relative;
+        padding: .75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+    }
+    .fa-cal{
+        font-size: large;
+    }
+}

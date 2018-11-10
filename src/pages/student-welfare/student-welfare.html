@@ -1,0 +1,60 @@
+<ion-header >
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Student Welfare</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding style="background-image: url('assets/imgs/grid_noise.png');">
+  <ion-item-divider class="text-primary withBg" color="secondary">Filing an appeal or a complaint</ion-item-divider>
+  <ion-item>
+    <ion-label>Subject </ion-label>
+    <ion-select [(ngModel)]="reportData.area">
+      <ion-option value="nes">Sexual Violence</ion-option>
+      <ion-option value="n64">Student Account Services</ion-option>
+      <ion-option value="ps">Other</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Enter Description</ion-label>
+    <ion-input type="text" [(ngModel)]="reportData.street"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Submit as</ion-label>
+    <ion-select [(ngModel)]="reportData.town">
+      <ion-option value="mashava">ANONYMOUS</ion-option>
+      <ion-option value="masvingo">M000002</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item-divider class="itm-lbl">Importance <ion-note class="itm-bge" [color]="color[importance-1]"  item-end>{{importanceRange[importance-1]}}</ion-note></ion-item-divider>
+  <ion-item>
+      <ion-range min="1" [color]="color[importance-1]" max="10" pin="true" [(ngModel)]="importance" (ionChange)="rangeChange($event)" >
+        <i range-left small class="fa fa-exclamation-circle text-primary" aria-hidden="true"></i>
+        <i range-right class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i>
+      </ion-range>
+    </ion-item>
+
+  
+  
+  <div class="report-form-btns text-center">
+    <button ion-button color="primary" outline [disabled]="!reportData.area">
+      SUBMIT REPORT
+    </button>
+  </div>
+  
+  <hr>
+  <ion-list no-lines>
+    <button class="text-primary profile-links withBg" ion-item>
+      <span class="prof-links-txt">Sports</span>
+      <i class="fa fa-angle-right" aria-hidden="true" item-right></i>
+    </button>
+    <button class="text-primary profile-links withBg" ion-item>
+      <span class="prof-links-txt">Clubs</span>
+      <i class="fa fa-angle-right" aria-hidden="true" item-right></i>
+    </button>
+  </ion-list>
+</ion-content>

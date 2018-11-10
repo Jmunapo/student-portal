@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Registration</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <i class="fa fa-key fa-fw fa-2x" aria-hidden="true"></i>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar placeholder="Search Modules" (input)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content style="background-image: url('assets/imgs/grid_noise.png');">
+  <ion-item-group [hidden]="registered">
+    <ion-item-divider class="text-primary" color="secondary"> Modules On Offer <h3 item-end><b>LEVEL:</b>  4.1</h3></ion-item-divider>
+    <ion-grid>
+        <ion-row class="t-heading">
+          <ion-col col-4>
+            CODE
+          </ion-col>
+          <ion-col col-8>
+            DESCRIPTION
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="t-body" *ngFor="let a of [1,2,3,4,5]">
+          <ion-col col-4>
+            HCS10{{a}}
+          </ion-col>
+          <ion-col col-8>
+            Introduction to HCS10{{a}} Lorem ipsum industry text
+          </ion-col>
+        </ion-row>
+
+        <p>Showing 1 to 5 of 5 entries</p>
+
+        <ion-row class="t-action" justify-content-start>
+          <ion-col col-12>
+              <p>Your current balance is <span class="text-danger">-413</span> USD </p>
+              <button ion-button icon-end outline (click)="register()">
+                Register
+                <ion-icon name="checkbox-outline"></ion-icon>
+              </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-item-group>
+
+
+  <ion-item-group [hidden]="!registered">
+      <ion-item-divider class="text-primary" color="secondary">Registered Modules <h3 item-end><b>LEVEL:</b>  4.1</h3></ion-item-divider>
+      <ion-grid>
+          <ion-row class="t-heading">
+            <ion-col col-3>
+              CODE
+            </ion-col>
+            <ion-col col-6>
+              DESCRIPTION
+            </ion-col>
+            <ion-col col-3>
+              SEATING
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="t-body" *ngFor="let a of [1,2,3,4,5]">
+            <ion-col col-3>
+              HCS10{{a}}
+            </ion-col>
+            <ion-col col-6>
+              Introduction to HCS10{{a}} lorem ipsum industry text, testing long text
+            </ion-col>
+            <ion-col col-3>
+              First
+            </ion-col>
+          </ion-row>
+          <br>
+          <ion-row class="t-action" justify-content-start>
+              <ion-col col-12>
+                  <button color="secondary" class="text-primary" ion-button icon-end (click)="confirmRegistration()">
+                      Confirm Registration
+                    <ion-icon name="checkbox-outline"></ion-icon>
+                  </button>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item-group>
+ 
+</ion-content>

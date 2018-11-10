@@ -1,0 +1,87 @@
+<!-- <ion-header >
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <i class="fa fa-key fa-fw fa-2x" aria-hidden="true"></i>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content style="background-image: url('assets/imgs/grid_noise.png');">
+  <div class="profile-image"  (click)="editimage()" padding>
+    <img src="assets/imgs/user.png">
+  </div>
+  <div class="profile-back">
+    <ion-item-group >
+      <ion-item-divider class="text-primary" color="secondary">Personal Details</ion-item-divider>
+      <ion-item no-lines>
+        <p item-left> <b>Surname:</b></p>
+        <p item-right>CHIMUTI</p>
+      </ion-item>
+      <ion-item no-lines>
+        <p item-left> <b>Name:</b></p>
+        <p item-right>KASIRAI</p>
+      </ion-item>
+      <ion-item no-lines>
+        <p item-left> <b>Sex:</b></p>
+        <p item-right>MALE</p>
+      </ion-item>
+
+      <ion-item no-lines>
+        <p item-left> <b>D. O. B:</b></p>
+        <p item-right>03/30/1994</p>
+      </ion-item>
+      <ion-item no-lines>
+        <p item-left> <b>Place of birth:</b></p>
+        <p item-right>CHIMANIMANI</p>
+      </ion-item>
+      <ion-item no-lines>
+        <p item-left> <b>National ID:</b></p>
+        <p item-right>75-122894K54</p>
+      </ion-item>
+      
+      <ion-item no-lines>
+        <p item-left> <b>Religion:</b></p>
+        <p item-right>CHRISTIANITY</p>
+      </ion-item>
+      <ion-item no-lines>
+        <p item-left> <b>Nationality:</b></p>
+        <p item-right>ZIMBABWEAN</p>
+      </ion-item>
+      <ion-item no-lines>
+        <p item-left> <b>Citizenship:</b></p>
+        <p item-right>ZIMBABWEAN</p>
+      </ion-item>
+      
+    </ion-item-group>
+  </div>
+
+  <ion-list no-lines>
+    <button class="text-primary profile-links" ion-item (click)="openPage('ContactPage')">
+      <span class="prof-links-txt">Contact Details</span>
+      <i class="fa fa-angle-right" aria-hidden="true" item-right></i>
+    </button>
+    <button class="text-primary profile-links" ion-item (click)="openPage('AcademicPage')">
+      <span class="prof-links-txt">Academic Details</span>
+      <i class="fa fa-angle-right" aria-hidden="true" item-right></i>
+    </button>
+  </ion-list>
+  
+  
+</ion-content>

@@ -1,0 +1,21 @@
+page-modules-registration {
+    ion-col {
+        border: 1px solid #dddddd;
+    }
+
+    .t-heading{
+        ion-col {
+            font-weight: bold;
+        }
+    }
+
+    .t-action{
+        ion-col{
+            text-align: center;
+            /*min-height: 100px;*/
+        }
+    }
+    .text-danger{
+        color: #F00 !important;
+    }
+}

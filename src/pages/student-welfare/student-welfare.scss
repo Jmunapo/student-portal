@@ -1,0 +1,35 @@
+page-student-welfare {
+    .report-form-btns{
+        button{
+            height: 35px !important;
+            min-width: 106px;
+        }
+        text-align: center !important;
+    }
+    .item:not(.withBg) {
+        background-color: transparent !important;
+    }
+    .itm-lbl{
+        background-color: transparent !important;
+        border-bottom: unset !important;
+        .label-md {
+            margin: 13px 8px -4px 0;
+        }
+    }
+    .itm-bge{
+        margin: 9px 8px 0px 0 !important;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .profile-links {
+        background-color: #FFFF99 !important;
+        border-bottom: 1px solid #bce8f1 !important;
+    }
+
+    .prof-links-txt{
+        font-size: 1.4rem;
+        font-weight: normal;
+    }
+}

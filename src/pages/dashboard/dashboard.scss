@@ -1,0 +1,41 @@
+page-dashboard {
+    .fa-2x {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+
+    .alert-warning {
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+        min-height: 60px;
+    }
+    .alert {
+        position: relative;
+        padding: .75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+    }
+
+    .fade {
+        transition: opacity .15s linear;
+    }
+
+    button.close {
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-appearance: none;
+    }
+
+    .close {
+        float: right;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .5;
+    }
+}

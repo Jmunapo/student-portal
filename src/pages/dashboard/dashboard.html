@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Dashboard</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openInfo()">
+        <i class="fa fa-ellipsis-v fa-fw fa-2x" aria-hidden="true"></i>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-content>
+    <ion-item-group>
+      <ion-item-divider class="text-primary" color="secondary">Student Semester Residential Details</ion-item-divider>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert" [hidden]="closeClicked" [@visibilityChanged]="visibility" style="opacity: 0">
+        <button class="close" ion-button icon-only clear item-end color="danger" (click)="closeAlert()">
+          <ion-icon name="close"></ion-icon>
+        </button>
+        To activate registration ,please add your semester residential details first
+      </div>
+
+      <student-residential></student-residential>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider class="text-primary" color="secondary">How To Register</ion-item-divider>
+      <ion-card>
+        <ion-card-content>
+          <p>1. To register navigate to <a (click)="openOption('Registration')" href="javascript:;">Registration</a></p>
+          <p>2. A list of Modules on offer for the current academic session will appear. (Please take note of the part and semester which will be indicated as you will be registered against that)</p>
+          <p>3. If you are carrying / supplementing /repeating a course or Modules, these should appear under the prescribed Modules provided they are on offer during the current academic session</p>
+          <p>4. Once you are content with the course information and if your fees balance meets the stipulated minimum fees you will notice a green icon which when clicked will finalise your registration.
+            The registered Modules will appear below the register button.</p>
+          <p>5. If your fees balance is below the stipulated minimum fees you won't be able to register. If you have a query regarding the reflecting
+             balance contact the Student Accounts Office</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider class="text-primary" color="secondary">How To View Your Results</ion-item-divider>
+      <ion-card>
+        <ion-card-content>
+          <p>1. To view your results navigate to <a (click)="openOption('Results')" href="javascript:;">Results</a></p>
+          <p>2. If your fees balance meets the requirements; you will be able to view all your published results (only for the programme you are currently enrolled in).</p>
+          <p>3. Your results may be supressed (for various reasons) by the BURSARY or LIBRARY or STUDENT AFFAIRS departments. In which case you will have to clarify your issues with them.</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider class="text-primary" color="secondary">How To View Your Examination Timetable</ion-item-divider>
+      <ion-card>
+        <ion-card-content>
+          <p>1. To view your examination timetable navigate to <a (click)="openOption('Timetable')" href="javascript:;">Examination Timetable</a></p>
+          <p>2. When the examination timetable is out and you notice that a course / Modules that you have registered is / are missing, please urgently notify your department.</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider class="text-primary" color="secondary"> How To Change Your Password / Profile Details</ion-item-divider>
+      <ion-card>
+        <ion-card-content>
+          <p>1. To change your password navigate to <a (click)="openOption('Student Profile')" href="javascript:;">Student Profile</a></p>
+          <p>2. You are encouraged to desist from using your registration number or your cellphone number as your password as these will be easily manipulated by your friends.</p>
+          <p>3. If you notice any errors on your student profile contact the Admissions and Student Records Department for ammendments</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item-group>
+  </ion-content>
+
+  <ion-fab bottom right>
+      <button ion-fab mini color="secondary" (click)="openInfo()">
+        <i class="fa fa-info fa-fw fa-2x text-primary" aria-hidden="true"></i>
+      </button>
+    </ion-fab>
+</ion-content>

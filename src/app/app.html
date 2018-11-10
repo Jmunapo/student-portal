@@ -1,0 +1,84 @@
+<ion-menu [content]="content" >
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title><small class="text-secondary">{{(user.reg_number)? 'Welcome '+user.reg_number : ''}} </small> </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content style="background-image: url('assets/imgs/grid_noise.png');">
+    <ion-list id="side-nav-btns">
+      <button menuClose ion-item (click)="openPage('DashboardPage', 'Dashboard')">
+        <i class="fa fa-th-large fa-fw"></i>
+        Dashboard
+      </button>
+      <button menuClose ion-item (click)="openPage('ProfilePage','')">
+        <i class="fa fa-id-card fa-fw"></i>
+        Student Profile
+      </button>
+      <button menuClose ion-item (click)="openPage('ModulesRegistrationPage', '')">
+        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+        Registration
+      </button>
+      <button menuClose ion-item (click)="openPage('ExamTTablePage', 'Examination Timetable')">
+        <i class="fa fa-calendar fa-fw"></i>
+        Examination Timetable
+      </button>
+      <button menuClose ion-item (click)="openPage('StudentWelfarePage', '')">
+        <i class="fa fa-slideshare fa-fw" aria-hidden="true"></i>
+        Student Welfare
+      </button>
+      <button menuClose ion-item (click)="openPage('AccommodationPage', '')">
+        <i class="fa fa-university fa-fw" aria-hidden="true"></i>
+        Accomodation
+      </button>
+      <button menuClose ion-item (click)="openPage('PlaceholderPage', 'Examination')">
+        <ion-icon name="done-all"></ion-icon>
+        Evaluation
+      </button>
+      <button menuClose ion-item (click)="openPage('PlaceholderPage', 'Results')">
+        <i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>
+        Results
+      </button>
+      <button menuClose ion-item (click)="openPage('PlaceholderPage', 'Fees Statement')">
+        <ion-icon name="list"></ion-icon>
+        Fees Statement
+      </button>
+      <button menuClose ion-item (click)="openPage('PlaceholderPage', 'S.R.C')">
+        <i class="fa fa-users" aria-hidden="true"></i>
+        S.R.C
+      </button>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div text-center>
+              <span (click)="openSettings()" menuClose>
+              <i class="fa fa-gear fa-2x faLight" aria-hidden="true"></i>
+            </span>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <span (click)="openAbout()" menuClose>
+                <i class="fa fa-question-circle-o fa-2x faLight" aria-hidden="true"></i>
+              </span>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div text-right>
+              <span (click)="SignOut()" menuClose>
+                <i class="fa fa-sign-out fa-2x faLight" aria-hidden="true"></i>
+              </span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-footer>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

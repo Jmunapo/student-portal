@@ -1,0 +1,29 @@
+page-profile {
+    .profile-back{
+        .item-md[no-lines]{
+            background: transparent !important;
+        }
+    }
+    .profile-image {
+        text-align: center;
+        img{
+            height: 200px;
+            width: 200px;
+            border-radius:50%;
+            border: 4px solid rgba(255,255,255,0.4);
+            -webkit-box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
+        }
+    }
+
+    .profile-links {
+        background-color: #FFFF99 !important;
+        border-bottom: 1px solid #bce8f1 !important;
+    }
+
+    .prof-links-txt{
+        font-size: 1.4rem;
+        font-weight: normal;
+    }
+}

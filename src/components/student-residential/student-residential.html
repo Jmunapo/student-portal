@@ -1,0 +1,41 @@
+<ion-item>
+  <ion-label floating>Street Address</ion-label>
+  <ion-input type="text" [(ngModel)]="resData.street"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Residential Area </ion-label>
+  <ion-select [(ngModel)]="resData.area">
+    <ion-option value="nes">Eastview</ion-option>
+    <ion-option value="n64">Mucheke A</ion-option>
+    <ion-option value="ps">Rujeko C</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Boarding House</ion-label>
+  <ion-select [(ngModel)]="resData.boarding_house">
+    <ion-option value="yes">YES</ion-option>
+    <ion-option value="no">NO</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Town</ion-label>
+  <ion-select [(ngModel)]="resData.town">
+    <ion-option value="mashava">Mashava</ion-option>
+    <ion-option value="masvingo">Masvingo</ion-option>
+    <ion-option value="others">Others</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item class="dash-form-btns">
+    <button ion-button color="primary" outline [disabled]="!resData.town || !resData.boarding_house || !resData.area || !resData.street" 
+    (click)="updateRes()">
+      Update
+    </button>
+
+    <button ion-button color="primary" outline [disabled]="resData.town || resData.boarding_house || resData.area || resData.street" 
+    (click)="getRoom()">
+        Find a room <i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i>
+    </button>
+</ion-item>
